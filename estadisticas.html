@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Estadísticas</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Avistamientos de Aves de Chile</h1>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="registro-voluntario.html">
+                        Registrarse
+                    </a>
+                </li>
+
+                <li>
+                    <a href="registrar-avistamiento.html">
+                        Registrar avistamiento
+                    </a>
+                </li>
+
+                <li>
+                    <a href="avistamientos.html">
+                        Ver avistamientos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="estadisticas.html">
+                        Estadísticas
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Estadísticas del sistema</h2>
+
+            <p>
+                En esta sección se presentan indicadores
+                generales sobre los voluntarios y los
+                avistamientos registrados.
+            </p>
+
+        </section>
+
+
+        <!-- INDICADORES GENERALES -->
+
+        <section>
+
+            <h2>Indicadores generales</h2>
+
+            <section class="indicadores">
+
+                <article class="indicador">
+
+                    <h3>Voluntarios registrados</h3>
+
+                    <p
+                        id="total-voluntarios"
+                        class="numero-indicador"
+                    >
+                        0
+                    </p>
+
+                </article>
+
+
+                <article class="indicador">
+
+                    <h3>Avistamientos registrados</h3>
+
+                    <p
+                        id="total-avistamientos"
+                        class="numero-indicador"
+                    >
+                        0
+                    </p>
+
+                </article>
+
+
+                <article class="indicador">
+
+                    <h3>Especies observadas</h3>
+
+                    <p
+                        id="total-especies"
+                        class="numero-indicador"
+                    >
+                        0
+                    </p>
+
+                </article>
+
+
+                <article class="indicador">
+
+                    <h3>Regiones con avistamientos</h3>
+
+                    <p
+                        id="total-regiones"
+                        class="numero-indicador"
+                    >
+                        0
+                    </p>
+
+                </article>
+
+            </section>
+
+        </section>
+
+
+        <!-- GRÁFICO AVISTAMIENTOS POR TIPO -->
+
+        <section class="seccion-grafico">
+
+            <h2>Avistamientos por tipo de ave</h2>
+
+            <p>
+                Cantidad de avistamientos registrados
+                para cada tipo de ave.
+            </p>
+
+            <ul
+                id="grafico-tipos"
+                class="grafico-barras"
+            >
+            </ul>
+
+        </section>
+
+
+        <!-- GRÁFICO VOLUNTARIOS POR REGIÓN -->
+
+        <section class="seccion-grafico">
+
+            <h2>Voluntarios por región</h2>
+
+            <p>
+                Distribución de los voluntarios registrados
+                según su región.
+            </p>
+
+            <ul
+                id="grafico-voluntarios"
+                class="grafico-barras"
+            >
+            </ul>
+
+        </section>
+
+
+        <!-- AVISTAMIENTOS POR REGIÓN -->
+
+        <section class="seccion-grafico">
+
+            <h2>Avistamientos por región</h2>
+
+            <p>
+                Cantidad de avistamientos registrados
+                en cada región.
+            </p>
+
+            <ul
+                id="grafico-regiones"
+                class="grafico-barras"
+            >
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Sistema de registro de avistamientos
+            de aves en Chile
+        </p>
+
+    </footer>
+
+
+    <script src="estadisticas.js"></script>
+
+</body>
+
+</html>

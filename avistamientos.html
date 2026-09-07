@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Avistamientos registrados</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+
+<body>
+    <header>
+
+        <h1>Avistamientos de Aves de Chile</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="registro-voluntario.html">
+                        Registrarse
+                    </a>
+                </li>
+
+                <li>
+                    <a href="registrar-avistamiento.html">
+                        Registrar avistamiento
+                    </a>
+                </li>
+
+                <li>
+                    <a href="avistamientos.html">
+                        Ver avistamientos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="estadisticas.html">
+                        Estadísticas
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Avistamientos registrados</h2>
+
+            <p>
+                Consulte los avistamientos reportados por
+                voluntarios en distintas localidades de Chile.
+            </p>
+
+        </section>
+
+        <!--Filtros-->>
+
+        <section>
+
+            <h2>Filtros y ordenamiento</h2>
+
+
+            <label for="filtro-tipo">
+                Tipo de ave:
+            </label>
+
+            <select id="filtro-tipo">
+
+                <option value="todos">
+                    Todos
+                </option>
+
+                <option value="rapaz">
+                    Ave rapaz
+                </option>
+
+                <option value="marina">
+                    Ave marina
+                </option>
+
+                <option value="acuatica">
+                    Ave acuática
+                </option>
+
+                <option value="terrestre">
+                    Ave terrestre
+                </option>
+
+                <option value="otro">
+                    Otro
+                </option>
+
+            </select>
+
+
+            <label for="orden">
+                Ordenar por:
+            </label>
+
+            <select id="orden">
+
+                <option value="fecha-desc">
+                    Fecha: más reciente primero
+                </option>
+
+                <option value="fecha-asc">
+                    Fecha: más antigua primero
+                </option>
+
+                <option value="lugar-asc">
+                    Lugar: A - Z
+                </option>
+
+                <option value="lugar-desc">
+                    Lugar: Z - A
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+
+        <section>
+
+            <h2>Resultados</h2>
+
+            <p id="cantidad-resultados">
+            </p>
+
+
+            <div class="contenedor-tabla">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Ave</th>
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Lugar</th>
+                            <th>Región</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabla-avistamientos">
+
+                        <!--
+                        Las filas serán creadas
+                        utilizando JavaScript.
+                        -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAGINACIÓN -->
+
+        <nav
+            class="paginacion"
+            aria-label="Paginación de avistamientos"
+        >
+
+            <button
+                type="button"
+                id="boton-anterior"
+            >
+                Anterior
+            </button>
+
+
+            <span id="informacion-pagina">
+                Página 1
+            </span>
+
+
+            <button
+                type="button"
+                id="boton-siguiente"
+            >
+                Siguiente
+            </button>
+
+        </nav>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Sistema de registro de avistamientos
+            de aves en Chile
+        </p>
+
+    </footer>
+
+
+    <script src="avistamientos.js"></script>
+
+</body>
+
+</html>

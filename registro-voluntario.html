@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de voluntario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Avistamientos de Aves de Chile</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="registro-voluntario.html">
+                        Registrarse
+                    </a>
+                </li>
+
+                <li>
+                    <a href="registrar-avistamiento.html">
+                        Registrar avistamiento
+                    </a>
+                </li>
+
+                <li>
+                    <a href="avistamientos.html">
+                        Ver avistamientos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="estadisticas.html">
+                        Estadísticas
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="contenedor-formulario">
+
+            <h2>Registro de voluntario</h2>
+
+            <p>
+                Complete sus datos para registrarse como voluntario.
+                Los campos marcados con (*) son obligatorios.
+            </p>
+
+
+            <form id="form-voluntario" novalidate>
+
+                <!-- DATOS PERSONALES -->
+
+                <fieldset>
+
+                    <legend>Datos personales</legend>
+
+
+                    <label for="nombre">
+                        Nombre *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ej: Diego"
+                    >
+
+
+                    <label for="apellido">
+                        Apellido *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        placeholder="Ej: Ruiz"
+                    >
+
+                </fieldset>
+
+
+                <!-- DATOS DE CONTACTO -->
+
+                <fieldset>
+
+                    <legend>Datos de contacto</legend>
+
+
+                    <label for="email">
+                        Correo electrónico *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ej: nombre@correo.cl"
+                    >
+
+
+                    <label for="celular">
+                        Número de celular *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="celular"
+                        name="celular"
+                        placeholder="Ej: +56 9 1234 5678"
+                    >
+
+                </fieldset>
+
+
+                <!-- DIRECCIÓN -->
+
+                <fieldset>
+
+                    <legend>Dirección</legend>
+
+
+                    <label for="region">
+                        Región *
+                    </label>
+
+                    <select
+                        id="region"
+                        name="region"
+                    >
+
+                        <option value="">
+                            Seleccione una región
+                        </option>
+
+                        <option value="arica">
+                            Arica y Parinacota
+                        </option>
+
+                        <option value="tarapaca">
+                            Tarapacá
+                        </option>
+
+                        <option value="antofagasta">
+                            Antofagasta
+                        </option>
+
+                        <option value="atacama">
+                            Atacama
+                        </option>
+
+                        <option value="coquimbo">
+                            Coquimbo
+                        </option>
+
+                        <option value="valparaiso">
+                            Valparaíso
+                        </option>
+
+                        <option value="metropolitana">
+                            Metropolitana de Santiago
+                        </option>
+
+                        <option value="ohiggins">
+                            Libertador General Bernardo O'Higgins
+                        </option>
+
+                        <option value="maule">
+                            Maule
+                        </option>
+
+                        <option value="nuble">
+                            Ñuble
+                        </option>
+
+                        <option value="biobio">
+                            Biobío
+                        </option>
+
+                        <option value="araucania">
+                            La Araucanía
+                        </option>
+
+                        <option value="los-rios">
+                            Los Ríos
+                        </option>
+
+                        <option value="los-lagos">
+                            Los Lagos
+                        </option>
+
+                        <option value="aysen">
+                            Aysén
+                        </option>
+
+                        <option value="magallanes">
+                            Magallanes y de la Antártica Chilena
+                        </option>
+
+                    </select>
+
+
+                    <label for="comuna">
+                        Comuna *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="comuna"
+                        name="comuna"
+                        placeholder="Ej: Santiago"
+                    >
+
+
+                    <label for="direccion">
+                        Dirección (opcional)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Ej: Avenida Beauchef 850"
+                    >
+
+                </fieldset>
+
+
+                <!-- MENSAJES DE VALIDACIÓN -->
+
+                <section
+                    id="mensajes-error"
+                    class="mensajes-error"
+                    aria-live="polite"
+                >
+                </section>
+
+
+                <!-- BOTONES -->
+
+                <button type="submit">
+                    Registrarme
+                </button>
+
+                <button
+                    type="reset"
+                    class="boton-secundario"
+                >
+                    Limpiar formulario
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Sistema de registro de avistamientos de aves en Chile
+        </p>
+
+    </footer>
+
+
+    <script src="voluntario.js"></script>
+
+</body>
+
+</html>

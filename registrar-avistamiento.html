@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrar avistamiento</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Avistamientos de Aves de Chile</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro-voluntario.html">Registrarse</a></li>
+                <li>
+                    <a href="registrar-avistamiento.html">
+                        Registrar avistamiento
+                    </a>
+                </li>
+                <li><a href="avistamientos.html">Ver avistamientos</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="contenedor-formulario">
+
+            <h2>Registrar un avistamiento</h2>
+
+            <p>
+                Complete la información del avistamiento.
+                Los campos marcados con (*) son obligatorios.
+            </p>
+
+
+            <form id="form-avistamiento" novalidate>
+
+                <fieldset>
+
+                    <legend>Información del ave</legend>
+
+                    <label for="tipo-ave">
+                        Tipo de ave *
+                    </label>
+
+                    <select id="tipo-ave" name="tipo-ave">
+                        <option value="">Seleccione un tipo</option>
+                        <option value="rapaz">Ave rapaz</option>
+                        <option value="marina">Ave marina</option>
+                        <option value="acuatica">Ave acuática</option>
+                        <option value="terrestre">Ave terrestre</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+
+                    <label for="nombre-ave">
+                        Nombre del ave *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre-ave"
+                        name="nombre-ave"
+                        placeholder="Ej: Cóndor andino"
+                    >
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Lugar del avistamiento</legend>
+
+
+                    <label for="region">
+                        Región *
+                    </label>
+
+                    <select id="region" name="region">
+
+                        <option value="">Seleccione una región</option>
+
+                        <option value="arica">
+                            Arica y Parinacota
+                        </option>
+
+                        <option value="tarapaca">
+                            Tarapacá
+                        </option>
+
+                        <option value="antofagasta">
+                            Antofagasta
+                        </option>
+
+                        <option value="atacama">
+                            Atacama
+                        </option>
+
+                        <option value="coquimbo">
+                            Coquimbo
+                        </option>
+
+                        <option value="valparaiso">
+                            Valparaíso
+                        </option>
+
+                        <option value="metropolitana">
+                            Metropolitana de Santiago
+                        </option>
+
+                        <option value="ohiggins">
+                            Libertador General Bernardo O'Higgins
+                        </option>
+
+                        <option value="maule">
+                            Maule
+                        </option>
+
+                        <option value="nuble">
+                            Ñuble
+                        </option>
+
+                        <option value="biobio">
+                            Biobío
+                        </option>
+
+                        <option value="araucania">
+                            La Araucanía
+                        </option>
+
+                        <option value="rios">
+                            Los Ríos
+                        </option>
+
+                        <option value="lagos">
+                            Los Lagos
+                        </option>
+
+                        <option value="aysen">
+                            Aysén
+                        </option>
+
+                        <option value="magallanes">
+                            Magallanes y de la Antártica Chilena
+                        </option>
+
+                    </select>
+
+
+                    <label for="comuna">
+                        Comuna *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="comuna"
+                        name="comuna"
+                        placeholder="Ej: Lo Barnechea"
+                    >
+
+
+                    <label for="lugar">
+                        Lugar específico *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lugar"
+                        name="lugar"
+                        placeholder="Ej: Cerro Provincia"
+                    >
+
+                    <p class="ayuda">
+                        Puede indicar un parque, cerro, playa,
+                        reserva o alguna referencia del lugar.
+                    </p>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Fecha y hora</legend>
+
+
+                    <label for="fecha">
+                        Fecha del avistamiento *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                    >
+
+
+                    <label for="hora">
+                        Hora del avistamiento *
+                    </label>
+
+                    <input
+                        type="time"
+                        id="hora"
+                        name="hora"
+                    >
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Registro multimedia</legend>
+
+                    <label for="archivo">
+                        Fotografías o videos *
+                    </label>
+
+                    <input
+                        type="file"
+                        id="archivo"
+                        name="archivo"
+                        accept="image/*,video/*"
+                        multiple
+                    >
+
+                    <p class="ayuda">
+                        Debe ingresar al menos una fotografía o video.
+                        Puede seleccionar varios archivos.
+                    </p>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Información adicional</legend>
+
+                    <label for="descripcion">
+                        Descripción del avistamiento (opcional)
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="5"
+                        maxlength="500"
+                        placeholder="Puede agregar información sobre el comportamiento del ave, cantidad observada, condiciones del lugar, etc."
+                    ></textarea>
+
+                    <p class="ayuda">
+                        Máximo 500 caracteres.
+                    </p>
+
+                </fieldset>
+
+
+                <section
+                    id="mensajes-error"
+                    class="mensajes-error"
+                    aria-live="polite"
+                >
+                </section>
+
+
+                <button type="submit">
+                    Registrar avistamiento
+                </button>
+
+                <button type="reset" class="boton-secundario">
+                    Limpiar formulario
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Sistema de registro de avistamientos de aves en Chile
+        </p>
+    </footer>
+
+
+    <script src="avistamiento.js"></script>
+
+</body>
+
+</html>
