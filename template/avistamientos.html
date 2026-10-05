@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block titulo %}Avistamientos registrados{% endblock %}
+{% block contenido %}
+<section>
+    <h2>Avistamientos registrados</h2>
+    <p>Consulte los avistamientos reportados por voluntarios en distintas localidades de Chile.</p>
+</section>
+<section>
+    <h2>Filtros y ordenamiento</h2>
+    <form method="get" action="{{ url_for('avistamientos') }}">
+        <label for="filtro-tipo">Tipo de ave:</label>
+        <select id="filtro-tipo" name="tipo">
+            <option value="todos" {% if tipo == 'todos' %}selected{% endif %}>Todos</option>
+            {% for valor, etiqueta in tipos_aves.items() %}
+            <option value="{{ valor }}" {% if tipo == valor %}selected{% endif %}>{{ etiqueta }}</option>
+            {% endfor %}
+        </select>
+        <label for="orden">Ordenar por:</label>
+        <select id="orden" name="orden">
+            {% for valor, etiqueta in [('fecha-desc', 'Fecha: más reciente primero'), ('fecha-asc', 'Fecha: más antigua primero'), ('lugar-asc', 'Lugar: A - Z'), ('lugar-desc', 'Lugar: Z - A')] %}
+            <option value="{{ valor }}" {% if orden == valor %}selected{% endif %}>{{ etiqueta }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="aplicar-filtros">Aplicar filtros</button>
+    </form>
+</section>
+<section>
+    <h2>Resultados</h2>
+    <p id="cantidad-resultados">{{ total }} avistamiento{{ '' if total == 1 else 's' }} encontrado{{ '' if total == 1 else 's' }}.</p>
+    <div class="contenedor-tabla">
+        <table>
+            <thead><tr><th scope="col">Ave</th><th scope="col">Tipo</th><th scope="col">Fecha</th><th scope="col">Hora</th><th scope="col">Lugar</th><th scope="col">Región</th></tr></thead>
+            <tbody id="tabla-avistamientos">
+                {% for avistamiento in avistamientos %}
+                {% set ubicacion = avistamiento.comuna or avistamiento.voluntario.comuna %}
+                <tr class="fila-avistamiento" data-url="{{ url_for('detalle_avistamiento', id=avistamiento.id) }}">
+                    <td><a href="{{ url_for('detalle_avistamiento', id=avistamiento.id) }}">{{ avistamiento.ave.nombre }}</a></td>
+                    <td>{{ tipos_aves[avistamiento.tipo_ave] }}</td>
+                    <td>{{ avistamiento.fecha_hora.strftime('%d-%m-%Y') }}</td>
+                    <td>{{ avistamiento.fecha_hora.strftime('%H:%M') }}</td>
+                    <td>{{ avistamiento.lugar }}</td>
+                    <td>{{ ubicacion.region.nombre }}</td>
+                </tr>
+                {% else %}<tr><td colspan="6">No hay avistamientos para mostrar.</td></tr>{% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+<nav class="paginacion" aria-label="Paginación de avistamientos">
+    {% if pagina > 1 %}
+    <a class="boton" id="boton-anterior" href="{{ url_for('avistamientos', pagina=pagina-1, tipo=tipo, orden=orden) }}">Anterior</a>
+    {% else %}<button type="button" id="boton-anterior" disabled>Anterior</button>{% endif %}
+    <span id="informacion-pagina">Página {{ pagina }} de {{ paginas }}</span>
+    {% if pagina < paginas %}
+    <a class="boton" id="boton-siguiente" href="{{ url_for('avistamientos', pagina=pagina+1, tipo=tipo, orden=orden) }}">Siguiente</a>
+    {% else %}<button type="button" id="boton-siguiente" disabled>Siguiente</button>{% endif %}
+</nav>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/avistamientos.js') }}"></script>{% endblock %}

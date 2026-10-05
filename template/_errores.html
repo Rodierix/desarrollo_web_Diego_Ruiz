@@ -1,0 +1,6 @@
+<div id="mensajes-error" class="mensajes-error{% if errores %} mensaje-error{% endif %}" aria-live="polite">
+    {% if errores %}
+    <p>Revise los siguientes datos:</p>
+    <ul>{% for error in errores %}<li>{{ error }}</li>{% endfor %}</ul>
+    {% endif %}
+</div>
