@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block titulo %}Registro de voluntario{% endblock %}
+{% block clase_body %}pagina-formulario{% endblock %}
+{% block contenido %}
+<section class="contenedor-formulario">
+
+            <h2>Registro de voluntario</h2>
+
+            <p>
+                Complete sus datos para registrarse como voluntario.
+                Los campos marcados con (*) son obligatorios.
+            </p>
+
+            <form id="form-voluntario" novalidate method="post" action="{{ url_for('registrar_voluntario') }}">
+<input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+                <!-- DATOS PERSONALES -->
+
+                <fieldset>
+
+                    <legend>Datos personales</legend>
+
+                    <label for="nombre">
+                        Nombre *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ej: Diego"
+                     maxlength="126" value="{{ datos.get('nombre', '') }}">
+
+                    <label for="apellido">
+                        Apellido *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        placeholder="Ej: Ruiz"
+                     maxlength="128" value="{{ datos.get('apellido', '') }}">
+
+                </fieldset>
+
+                <!-- DATOS DE CONTACTO -->
+
+                <fieldset>
+
+                    <legend>Datos de contacto</legend>
+
+                    <label for="email">
+                        Correo electrónico *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ej: nombre@correo.cl"
+                     maxlength="80" value="{{ datos.get('email', '') }}">
+
+                    <label for="celular">
+                        Número de celular *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="celular"
+                        name="celular"
+                        placeholder="Ej: +56 9 1234 5678"
+                     maxlength="20" value="{{ datos.get('celular', '') }}">
+
+                </fieldset>
+
+                <!-- DIRECCIÓN -->
+
+                <fieldset>
+
+                    <legend>Dirección</legend>
+
+                    {% include '_ubicacion.html' %}
+
+                    <label for="direccion">
+                        Dirección (opcional)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Ej: Avenida Beauchef 850"
+                     maxlength="200" value="{{ datos.get('direccion', '') }}">
+
+                </fieldset>
+
+                <!-- MENSAJES DE VALIDACIÓN -->
+
+                {% include '_errores.html' %}
+
+                <!-- BOTONES -->
+
+                <button type="submit">
+                    Registrarme
+                </button>
+
+                <button
+                    type="reset"
+                    class="boton-secundario"
+                >
+                    Limpiar formulario
+                </button>
+
+            </form>
+
+        </section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/formularios.js') }}"></script>
+<script src="{{ url_for('static', filename='js/voluntario.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block titulo %}Estadísticas{% endblock %}
+{% block contenido %}
+<section id="estadisticas" data-url="{{ url_for('datos_estadisticas') }}">
+    <h2>Estadísticas</h2>
+    <p id="estado-estadisticas" role="status">Cargando estadísticas…</p>
+</section>
+<figure class="seccion-grafico">
+    <figcaption>Avistamientos por día</figcaption>
+    <div id="grafico-dias"></div>
+</figure>
+<figure class="seccion-grafico">
+    <figcaption>Avistamientos por tipo de ave</figcaption>
+    <div id="grafico-tipos"></div>
+</figure>
+<figure class="seccion-grafico">
+    <figcaption>Voluntarios por comuna</figcaption>
+    <div id="grafico-comunas"></div>
+</figure>
+<a href="{{ url_for('index') }}">Volver a la portada</a>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='vendor/highcharts.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/accessibility.js') }}"></script>
+<script src="{{ url_for('static', filename='js/estadisticas.js') }}"></script>
+{% endblock %}

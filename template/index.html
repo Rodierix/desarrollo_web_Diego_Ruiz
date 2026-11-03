@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block titulo %}Inicio{% endblock %}
+{% block contenido %}
+<section>
+    <h2>Bienvenido al registro de avistamientos</h2>
+    <p>Sistema para registrar y consultar avistamientos de aves realizados por voluntarios en Chile.</p>
+</section>
+<section>
+    <h2>Últimos avistamientos agregados</h2>
+    <div class="ultimos-avistamientos">
+        {% for avistamiento in avistamientos %}
+        {% set ubicacion = avistamiento.comuna or avistamiento.voluntario.comuna %}
+        <article>
+            <h3><a href="{{ url_for('detalle_avistamiento', id=avistamiento.id) }}">{{ avistamiento.ave.nombre }}</a></h3>
+            <p>{{ tipos_aves[avistamiento.tipo_ave] }} · {{ avistamiento.fecha_hora.strftime('%d-%m-%Y %H:%M') }}</p>
+            <p>{{ avistamiento.lugar }}, {{ ubicacion.nombre }} · {{ ubicacion.region.nombre }}</p>
+            <p>Informado por {{ avistamiento.voluntario.nombre }}</p>
+            <a href="{{ url_for('detalle_avistamiento', id=avistamiento.id) }}">Ver información y archivos</a>
+        </article>
+        {% else %}
+        <p>Aún no hay avistamientos registrados. <a href="{{ url_for('registrar_avistamiento') }}">Informe el primero</a>.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,14 @@
+<label for="region">Región *</label>
+<select id="region" name="region" required>
+    <option value="">Seleccione una región</option>
+    {% for region in regiones %}
+    <option value="{{ region.id }}" {% if datos.get('region') == region.id|string %}selected{% endif %}>{{ region.nombre }}</option>
+    {% endfor %}
+</select>
+<label for="comuna">Comuna *</label>
+<select id="comuna" name="comuna" required>
+    <option value="">Seleccione una comuna</option>
+    {% for comuna in comunas %}
+    <option value="{{ comuna.id }}" data-region="{{ comuna.region_id }}" {% if datos.get('comuna') == comuna.id|string %}selected{% endif %}>{{ comuna.nombre }}</option>
+    {% endfor %}
+</select>

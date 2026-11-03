@@ -1,0 +1,586 @@
+nombre,tipo
+Aguila,rapaz
+Aguila pescadora,rapaz
+Aguilucho,rapaz
+Aguilucho chico,rapaz
+Aguilucho de ala rojiza,rapaz
+Aguilucho de cola rojiza,rapaz
+Aguilucho de la Puna,rapaz
+Aguilucho langostero,rapaz
+Albatros de Buller,marina
+Albatros de cabeza gris,marina
+Albatros de ceja negra,marina
+Albatros de corona blanca,marina
+Albatros de frente blanca,marina
+Albatros de las Antipodas,marina
+Albatros de las Galápagos,marina
+Albatros de las Chatham,marina
+Albatros de pico delgado,marina
+Albatros errante,marina
+Albatros oscuro,marina
+Albatros oscuro de manto claro,marina
+Albatros real del Norte,marina
+Albatros real del Sur,marina
+Arañero cara negra,terrestre
+Ave del trópico de cola blanca,marina
+Ave del trópico de cola roja,marina
+Ave del trópico de pico rojo,marina
+Ave fragata,marina
+Ave fragata grande,marina
+Bailarín,rapaz
+Bailarín chico,terrestre
+Bailarín chico argentino,terrestre
+Bailarín chico peruano,terrestre
+Bandurria,acuatica
+Bandurria de la puna,acuatica
+Bandurrilla,terrestre
+Bandurrilla de Arica,terrestre
+Bandurrilla de la puna,terrestre
+Bandurrilla de las piedras,terrestre
+Bandurrilla de los bosques,terrestre
+Bandurrilla de pico recto,terrestre
+Batitú,terrestre
+Becacina,acuatica
+Becacina chica,acuatica
+Becacina de la puna,acuatica
+Becacina grande,acuatica
+Becacina pintada,acuatica
+Benteveo,terrestre
+Benteveo blanco y negro,terrestre
+Benteveo chico,terrestre
+Benteveo de vientre azufre,terrestre
+Benteveo real,terrestre
+Birro comun,terrestre
+Blanquillo,acuatica
+Burlisto castaño,terrestre
+Burrito negruzco,acuatica
+Cachaña,terrestre
+Cachudito,terrestre
+Cachudito de cresta blanca,terrestre
+Cachudito de Juan Fernandez,terrestre
+Cachudito del Norte,terrestre
+Caiquén,acuatica
+Caití,acuatica
+Canastero,terrestre
+Canastero chico,terrestre
+Canastero de cola larga,terrestre
+Canastero del Norte,terrestre
+Canastero del Sur,terrestre
+Canastero de las quebradas,terrestre
+Candelita americana,terrestre
+Canquén,acuatica
+Canquén colorado,acuatica
+Caranca,marina
+Carancho cordillerano,rapaz
+Carancho cordillerano del sur,rapaz
+Carancho negro,rapaz
+Carao,acuatica
+Cardenal,terrestre
+Carpinterito,terrestre
+Carpintero negro,terrestre
+Carpintero real,terrestre
+Cazamoscas chocolate,terrestre
+Cazamoscas de cola corta,terrestre
+Cazamoscas estriado,terrestre
+Cazamoscas picochato,terrestre
+Cazamoscas tijereta,terrestre
+Celestino,terrestre
+Cernícalo,rapaz
+Charlatán,terrestre
+Chercán,terrestre
+Chercán de las vegas,acuatica
+Chincol,terrestre
+Chiricoca,terrestre
+Chirihue,terrestre
+Chirihue austral,terrestre
+Chirihue azafrán,terrestre
+Chirihue cordillerano,terrestre
+Chirihue de la puna,terrestre
+Chirihue de Raimondi,terrestre
+Chirihue dorado,terrestre
+Chirihue verdoso,terrestre
+Chorlito cordillerano,terrestre
+Chorlo ártico,acuatica
+Chorlo cabezón,terrestre
+Chorlo chileno,acuatica
+Chorlo de campo,terrestre
+Chorlo de collar,acuatica
+Chorlo de doble collar,acuatica
+Chorlo de la Puna,acuatica
+Chorlo de Magallanes,acuatica
+Chorlo de pico grueso,acuatica
+Chorlo dorado,acuatica
+Chorlo dorado del Pacifico,acuatica
+Chorlo gritón,acuatica
+Chorlo nevado,acuatica
+Chorlo semipalmado,acuatica
+Choroy,terrestre
+Chucao,terrestre
+Chuncho,rapaz
+Chuncho del Norte,rapaz
+Churrete,acuatica
+Churrete acanelado,terrestre
+Churrete austral,terrestre
+Churrete chico,terrestre
+Churrete costero,marina
+Churrete costero peruano,marina
+Churrete de alas blancas,terrestre
+Churrete de alas crema,terrestre
+Churrín de la Mocha,terrestre
+Churrín del norte,terrestre
+Churrín del Sur,terrestre
+Cigüeña de cabeza pelada,acuatica
+Cisne coscoroba,acuatica
+Cisne de cuello negro,acuatica
+Codorniz,terrestre
+Colegial,terrestre
+Colegial del Norte,terrestre
+Colilarga,terrestre
+Comesebo chico,terrestre
+Comesebo de los tamarugales,terrestre
+Comesebo gigante,terrestre
+Comesebo grande,terrestre
+Comesebo negro,terrestre
+Cometocino de Arica,terrestre
+Cometocino de dorso castaño,terrestre
+Cometocino de Gay,terrestre
+Cometocino del norte,terrestre
+Cometocino patagónico,terrestre
+Concón,rapaz
+Cóndor de Los Andes,rapaz
+Corbatita,terrestre
+Corbatita de doble collar,terrestre
+Corbatita overo,terrestre
+Cormorán antártico,marina
+Cormorán de las rocas,marina
+Cormorán Imperial,marina
+Cortarramas,terrestre
+Cotorra argentina,terrestre
+Cuclillo de pico amarillo,terrestre
+Cuclillo de pico negro,terrestre
+Cuervo de pantano,acuatica
+Cuervo de pantano de cara pelada,acuatica
+Cuervo de pantano de la Puna,acuatica
+Diuca,terrestre
+Diuca de alas blancas,terrestre
+Diucón,terrestre
+Dormilona cenicienta,terrestre
+Dormilona chica,terrestre
+Dormilona de ceja blanca,terrestre
+Dormilona de frente negra,terrestre
+Dormilona de la Puna,terrestre
+Dormilona de nuca rojiza,terrestre
+Dormilona fraile,terrestre
+Dormilona gigante,terrestre
+Dormilona rufa,terrestre
+Dormilona tontito,terrestre
+Espátula,acuatica
+Estornino pinto,terrestre
+Faisán,terrestre
+Fardela atlántica,marina
+Fardela blanca,marina
+Fardela blanca de Juan Fernandez,marina
+Fardela blanca de Masatierra,marina
+Fardela capirotada,marina
+Fardela chica,marina
+Fardela de cabeza parda,marina
+Fardela de Cook,marina
+Fardela de dorso gris,marina
+Fardela de Fénix,marina
+Fardela de frente blanca,marina
+Fardela de Henderson,marina
+Fardela de Kerguelen,marina
+Fardela de Masafuera,marina
+Fardela de Murphy,marina
+Fardela de Nueva Zelanda,marina
+Fardela de Parkinson,marina
+Fardela de Pascua,marina
+Fardela del Pacifico,marina
+Fardela gris,marina
+Fardela heráldica,marina
+Fardela negra,marina
+Fardela negra de Juan Fernandez,marina
+Fardela negra de patas pálidas,marina
+Fardela negra grande,marina
+Fardela Taiko,marina
+Fardela tropical,marina
+Federal,acuatica
+Fio-fio,terrestre
+Fio-fio grande,terrestre
+Flamenco chileno,acuatica
+Gallina ciega,terrestre
+Gallina ciega chica,terrestre
+Gallina ciega boreal,terrestre
+Gallina ciega peruana,terrestre
+Garcita azulada,acuatica
+Garza azul,acuatica
+Garza boyera o Garza bueyera,acuatica
+Garza chica,acuatica
+Garza chiflon,acuatica
+Garza cuca,acuatica
+Garza grande,acuatica
+Garza tricolor,acuatica
+Gavilan pajarero,rapaz
+Gaviota andina,acuatica
+Gaviota argentea,marina
+Gaviota austral,marina
+Gaviota cáhuil,marina
+Gaviota de Bonaparte,marina
+Gaviota de capucho gris,marina
+Gaviota de Franklin,marina
+Gaviota de las Galápagos,marina
+Gaviota de Sabine,marina
+Gaviota dominicana,marina
+Gaviota garuma,marina
+Gaviota peruana,marina
+Gaviota reidora,marina
+Gaviotín albo,marina
+Gaviotín antártico,marina
+Gaviotín apizarrado,marina
+Gaviotín ártico,marina
+Gaviotín boreal,marina
+Gaviotín chico,marina
+Gaviotín chico boreal,marina
+Gaviotín de bridas,marina
+Gaviotín de pico grande,marina
+Gaviotín de San Ambrosio,marina
+Gaviotín de San Félix,marina
+Gaviotín de Sandwich,marina
+Gaviotín elegante,marina
+Gaviotín monja,marina
+Gaviotín negro,marina
+Gaviotín oscuro,marina
+Gaviotín pascuense,marina
+Gaviotín pico grueso,marina
+Gaviotín piquerito,marina
+Gaviotín real,marina
+Gaviotín sudamericano,marina
+Golondrina barranquera,terrestre
+Golondrina bermeja,terrestre
+Golondrina chilena,terrestre
+Golondrina de cabeza rojiza,terrestre
+Golondrina de dorso negro,terrestre
+Golondrina de los riscos,terrestre
+Golondrina domestica,terrestre
+Golondrina grande,terrestre
+Golondrina negra,terrestre
+Golondrina negra peruana,terrestre
+Golondrina parda,terrestre
+Golondrina de mar,marina
+Golondrina de mar andina,marina
+Golondrina de mar boreal,marina
+Golondrina de mar chica,marina
+Golondrina de mar de ceja blanca,marina
+Golondrina de mar de collar,marina
+Golondrina de mar de garganta blanca,marina
+Golondrina de mar de vientre blanco,marina
+Golondrina de mar de vientre negro,marina
+Golondrina de mar negra,marina
+Golondrina de mar oscura,marina
+Golondrina de mar peruana,marina
+Golondrina de mar pincoya,marina
+Golondrina de mar subantártica,marina
+Gorrión,terrestre
+Guacharo,terrestre
+Guanay,marina
+Halcón de pecho naranja,rapaz
+Halcón perdiguero,rapaz
+Halcón peregrino,rapaz
+Halcón reidor,rapaz
+Huairavillo,acuatica
+Huairavillo de dorso negro,acuatica
+Huairavo,acuatica
+Huairavo de corona amarilla,acuatica
+Huala,acuatica
+Hued-hued castaño,terrestre
+Hued-hued del sur,terrestre
+Jacana,acuatica
+Jílguero,terrestre
+Jílguero cordillerano,terrestre
+Jílguero grande,terrestre
+Jílguero negro,terrestre
+Jílguero peruano,terrestre
+Jote de cabeza colorada,rapaz
+Jote de cabeza negra,rapaz
+Lavandera blanca,terrestre
+Lechuza,rapaz
+Lile,marina
+Loica,terrestre
+Loica argentina,terrestre
+Loica peruana,terrestre
+Loro de cara roja,terrestre
+Loro mitrata,terrestre
+Martín pescador,acuatica
+Martín pescador chico,acuatica
+Matacaballos,terrestre
+Matacaballos de pico liso,terrestre
+Mero,terrestre
+Mero chico,terrestre
+Mero de ala canela,terrestre
+Mero de la puna,terrestre
+Mero de Tarapacá,terrestre
+Mero gaucho,terrestre
+Milano tijereta,rapaz
+Minero,terrestre
+Minero austral,terrestre
+Minero chico,terrestre
+Minero cordillerano,terrestre
+Minero de la Puna,terrestre
+Minero de pico delgado,terrestre
+Minero grande,terrestre
+Mirlo,terrestre
+Mirlo de pico corto,terrestre
+Monjita americana,terrestre
+Monjita blanca,terrestre
+Monjita castaña,terrestre
+Monjita coronada,terrestre
+Mosqueta boreal,terrestre
+Naranjero,terrestre
+Negrillo,terrestre
+Nuco,rapaz
+Ñacundá,terrestre
+Ñandú,terrestre
+Pájaro amarillo,terrestre
+Pájaro plomo,terrestre
+Paloma antártica,marina
+Paloma de alas blancas,terrestre
+Paloma de alas moteadas,terrestre
+Paloma doméstica,terrestre
+Paloma picazuro,terrestre
+Parina chica,acuatica
+Parina grande,acuatica
+Patagón,terrestre
+Pato anteojillo,acuatica
+Pato capuchino,acuatica
+Pato castaño,acuatica
+Pato colorado,acuatica
+Pato cortacorrientes,acuatica
+Pato crestudo,acuatica
+Pato criollo,acuatica
+Pato cuchara,acuatica
+Pato de alas azules,acuatica
+Pato de collar,acuatica
+Pato gargantillo,acuatica
+Pato jergón chico,acuatica
+Pato jergón grande,acuatica
+Pato juarjual,acuatica
+Pato negro,acuatica
+Pato puna,acuatica
+Pato rana de pico ancho,acuatica
+Pato rana de pico delgado,acuatica
+Pato real,acuatica
+Pato rinconero,acuatica
+Pato silbón,acuatica
+Pato silbón de ala blanca,acuatica
+Pato silbón pampa,acuatica
+Pelícano,marina
+Pelícano pardo,marina
+Pepitero,terrestre
+Pequén,rapaz
+Perdicita,terrestre
+Perdicita cojón,terrestre
+Perdicita cordillerana,terrestre
+Perdicita cordillerana austral,terrestre
+Perdiz austral,terrestre
+Perdiz chilena,terrestre
+Perdiz copetona,terrestre
+Perdiz cordillerana,terrestre
+Perdiz cordillerana de Arica,terrestre
+Perdiz de la Puna,terrestre
+Perico cordillerano,terrestre
+Perrito,acuatica
+Petrel antártico,marina
+Petrel azulado,marina
+Petrel boreal,marina
+Petrel damero,marina
+Petrel de alas negras,marina
+Petrel de cara gris,marina
+Petrel de collar gris,marina
+Petrel de Gould,marina
+Petrel de las Galapagos,marina
+Petrel de las nieves,marina
+Petrel gigante antártico,marina
+Petrel gigante subantártico,marina
+Petrel moteado,marina
+Petrel plateado,marina
+Petrel-paloma antártico,marina
+Petrel-paloma chico,marina
+Petrel-paloma de pico ancho,marina
+Petrel-paloma de pico delgado,marina
+Peuco,rapaz
+Peuquito,rapaz
+Pibi ahumado,terrestre
+Pibi occidental,terrestre
+Picabuey,terrestre
+Picaflor,terrestre
+Picaflor azul,terrestre
+Picaflor cometa,terrestre
+Picaflor comun argentino,terrestre
+Picaflor cordillerano,terrestre
+Picaflor de Arica,terrestre
+Picaflor de Cora,terrestre
+Picaflor de Juan Fernández,terrestre
+Picaflor de la Puna,terrestre
+Picaflor del Norte,terrestre
+Picaflor gigante,terrestre
+Picurio,acuatica
+Pidén,acuatica
+Pidén austral,acuatica
+Pidén moteado,acuatica
+Pidencito,acuatica
+Pillo,acuatica
+Pilpilén,marina
+Pilpilén austral,marina
+Pilpilén negro,marina
+Pimpollo,acuatica
+Pimpollo tobiano,acuatica
+Pingüino de Adelia,marina
+Pingüino de barbijo,marina
+Pingüino de Humboldt,marina
+Pingüino de Magallanes,marina
+Pingüino de penacho amarillo,marina
+Pingüino de las Snares,marina
+Pingüino emperador,marina
+Pingüino enano,marina
+Pingüino macaroni,marina
+Pingüino papúa,marina
+Pingüino real,marina
+Pingüino rey,marina
+Piquero,marina
+Piquero blanco,marina
+Piquero de Brewster (Piquero de Cocos),marina
+Piquero de Nazca,marina
+Piquero de patas azules,marina
+Piquero de patas coloradas,marina
+Piranga,terrestre
+Pirincho,terrestre
+Pitajo gris,terrestre
+Pitajo rojizo,terrestre
+Pitanguá,terrestre
+Pitiayumí,terrestre
+Pitio,terrestre
+Pitio del Norte,terrestre
+Pitotoy chico,acuatica
+Pitotoy grande,acuatica
+Pitotoy solitario,acuatica
+Piuquén,acuatica
+Pizarrita,terrestre
+Platero,terrestre
+Playero acuminado,acuatica
+Playero ártico,acuatica
+Playero blanco,acuatica
+Playero canela,terrestre
+Playero de Baird,acuatica
+Playero de las rompientes,acuatica
+Playero de lomo blanco,acuatica
+Playero de patas largas,acuatica
+Playero enano,acuatica
+Playero grande,acuatica
+Playero gris,acuatica
+Playero manchado,acuatica
+Playero occidental,acuatica
+Playero pectoral,acuatica
+Playero semipalmado,acuatica
+Playero ventinegro,acuatica
+Playero vuelvepiedras,acuatica
+Playero zarapito,acuatica
+Plebeyo,terrestre
+Pollito de mar boreal,marina
+Pollito de mar rojizo,marina
+Pollito de mar tricolor,acuatica
+Queltehue,terrestre
+Queltehue de la Puna,acuatica
+Quetru chileno,marina
+Quetru no volador,marina
+Quetru volador,acuatica
+Rara,terrestre
+Rayadito,terrestre
+Rayadito de Masafuera,terrestre
+Rayadito subantartico,terrestre
+Rayador,marina
+Reinita acuatica,acuatica
+Reinita de Canada,terrestre
+Reinita de dorso verde,terrestre
+Reinita de garganta naranja,terrestre
+Reinita de Tennessee,terrestre
+Rey del bosque,terrestre
+Run-run,acuatica
+Saca-tu-real,terrestre
+Salteador chico,marina
+Salteador chileno,marina
+Salteador de cola larga,marina
+Salteador pardo,marina
+Salteador polar,marina
+Salteador pomarino,marina
+Semillero,terrestre
+Semillero peruano,terrestre
+Siete-colores,acuatica
+Tagua,acuatica
+Tagua andina,acuatica
+Tagua chica,acuatica
+Tagua cornuda,acuatica
+Tagua de frente roja,acuatica
+Tagua gigante,acuatica
+Tagüita,acuatica
+Tagüita del Norte,acuatica
+Tagüita purpúrea,acuatica
+Tapaculo,terrestre
+Tenca,terrestre
+Tenca calandria,terrestre
+Tenca de alas blancas,terrestre
+Tenca de cola larga,terrestre
+Tenca de dorso castaño,terrestre
+Tenca patagónica,terrestre
+Tersina,terrestre
+Tijeral,terrestre
+Tijeral listado,terrestre
+Tiuque,rapaz
+Torcaza,terrestre
+Tordo,terrestre
+Tordo bayo,terrestre
+Tórtola,terrestre
+Tórtola cordillerana,terrestre
+Tortolita boliviana,terrestre
+Tortolita de la Puna,terrestre
+Tortolita cuyana,terrestre
+Tortolita quiguagua,terrestre
+Tortolita rojiza,terrestre
+Trabajador,acuatica
+Traro,rapaz
+Tricahue,terrestre
+Trile,acuatica
+Trile de cabeza canela,acuatica
+Tucúquere,rapaz
+Tuquito gris,terrestre
+Turca,terrestre
+Turpial norteño,terrestre
+Turpial variable,terrestre
+Urutau,terrestre
+Vari,rapaz
+Vari huevetero,rapaz
+Vencejo chico,terrestre
+Vencejo de chimenea,terrestre
+Vencejo de collar blanco,terrestre
+Verderón de ojos rojos,terrestre
+Viudita,terrestre
+Viudita negra,terrestre
+Yal,terrestre
+Yal austral,terrestre
+Yal cordillerano,terrestre
+Yeco,acuatica
+Yunco,marina
+Yunco de Magallanes,marina
+Yunco de los canales,marina
+Zanate mexicano,terrestre
+Zarapito,acuatica
+Zarapito boreal,acuatica
+Zarapito de cola barrada,acuatica
+Zarapito de pico recto,acuatica
+Zarapito moteado,acuatica
+Zarapito polinésico,acuatica
+Zorzal,terrestre
+Zorzal argentino,terrestre
+Zorzal manchado,terrestre
+Zorzal negro,terrestre
+Zorzal tropical,terrestre
+Zorzalito de Swainson,terrestre

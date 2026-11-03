@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block titulo %}Avistamiento de {{ avistamiento.ave.nombre }}{% endblock %}
+{% block contenido %}
+{% set ubicacion = avistamiento.comuna or avistamiento.voluntario.comuna %}
+<section>
+    <h2>{{ avistamiento.ave.nombre }}</h2>
+    <dl>
+        <dt>Tipo de ave</dt><dd>{{ tipos_aves[avistamiento.tipo_ave] }}</dd>
+        <dt>Fecha y hora</dt><dd>{{ avistamiento.fecha_hora.strftime('%d-%m-%Y %H:%M') }}</dd>
+        <dt>Lugar</dt><dd>{{ avistamiento.lugar }}</dd>
+        <dt>Comuna</dt><dd>{{ ubicacion.nombre }}</dd>
+        <dt>Región</dt><dd>{{ ubicacion.region.nombre }}</dd>
+        <dt>Voluntario</dt><dd>{{ avistamiento.voluntario.nombre }}</dd>
+        <dt>Correo electrónico</dt><dd>{{ avistamiento.voluntario.email }}</dd>
+        <dt>Celular</dt><dd>{{ avistamiento.voluntario.telefono }}</dd>
+        <dt>Descripción</dt><dd class="descripcion">{{ avistamiento.descripcion or 'Sin descripción adicional.' }}</dd>
+    </dl>
+</section>
+<section>
+    <h2>Fotografías y videos</h2>
+    <div class="galeria">
+        {% for registro in avistamiento.registros %}
+        <figure>
+            {% if registro.ruta_archivo.lower().endswith(('.mp4', '.webm')) %}
+            <video controls preload="metadata" aria-label="{{ registro.nombre_archivo }}">
+                <source src="{{ url_for('static', filename=registro.ruta_archivo) }}" type="{{ 'video/mp4' if registro.ruta_archivo.lower().endswith('.mp4') else 'video/webm' }}">
+                Su navegador no admite este video.
+            </video>
+            {% else %}
+            <a href="{{ url_for('static', filename=registro.ruta_archivo) }}" target="_blank" rel="noopener">
+                <img src="{{ url_for('static', filename=registro.ruta_archivo) }}" alt="{{ registro.nombre_archivo }}" loading="lazy">
+            </a>
+            {% endif %}
+            <figcaption>{{ registro.nombre_archivo }}</figcaption>
+        </figure>
+        {% else %}<p>Este avistamiento no tiene archivos asociados.</p>{% endfor %}
+    </div>
+</section>
+<section>
+    <h2>Comentarios</h2>
+    <p id="estado-lista" role="status">Cargando comentarios…</p>
+    <ul id="lista-comentarios"></ul>
+    <form id="form-comentario" action="{{ url_for('comentarios', id=avistamiento.id) }}" method="post" novalidate>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <label for="nombre-comentario">Nombre del comentarista (3 a 50 caracteres)</label>
+        <input type="text" id="nombre-comentario" name="nombre" required>
+        <label for="texto-comentario">Comentario (5 a 300 caracteres)</label>
+        <textarea id="texto-comentario" name="texto" rows="3" cols="40" required></textarea>
+        <p id="estado-envio" role="status"></p>
+        <button type="submit">Agregar comentario</button>
+    </form>
+</section>
+<a href="{{ url_for('avistamientos') }}">Volver al listado</a>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/comentarios.js') }}"></script>
+{% endblock %}

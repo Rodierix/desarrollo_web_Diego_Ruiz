@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block titulo %}Registrar avistamiento{% endblock %}
+{% block clase_body %}pagina-formulario{% endblock %}
+{% block contenido %}
+<section class="contenedor-formulario">
+
+            <h2>Registrar un avistamiento</h2>
+
+            <p>
+                Complete la información del avistamiento.
+                Los campos marcados con (*) son obligatorios.
+            </p>
+
+            <form id="form-avistamiento" novalidate method="post" action="{{ url_for('registrar_avistamiento') }}" enctype="multipart/form-data">
+<input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+                <fieldset>
+    <legend>Voluntario responsable</legend>
+    <label for="voluntario">Voluntario *</label>
+    <select id="voluntario" name="voluntario" required>
+        <option value="">Seleccione un voluntario</option>
+        {% for voluntario in voluntarios %}
+        <option value="{{ voluntario.id }}" {% if datos.get('voluntario') == voluntario.id|string %}selected{% endif %}>{{ voluntario.nombre }} ({{ voluntario.email }})</option>
+        {% endfor %}
+    </select>
+    {% if not voluntarios %}<p>Primero debe <a href="{{ url_for('registrar_voluntario') }}">registrar un voluntario</a>.</p>{% endif %}
+</fieldset>
+<fieldset>
+
+                    <legend>Información del ave</legend>
+                    <p class="ayuda">Elija un tipo para filtrar las especies o seleccione primero el nombre para completar el tipo automáticamente.</p>
+
+                    <label for="tipo-ave">
+                        Tipo de ave *
+                    </label>
+
+                    <select id="tipo-ave" name="tipo-ave" required>
+    <option value="">Seleccione un tipo</option>
+    {% set tipos_disponibles = aves | map(attribute='tipo') | unique | list %}
+    {% for valor, etiqueta in tipos_aves.items() if valor in tipos_disponibles %}
+    <option value="{{ valor }}" {% if datos.get('tipo-ave') == valor %}selected{% endif %}>{{ etiqueta }}</option>
+    {% endfor %}
+</select>
+
+                    <label for="nombre-ave">
+                        Nombre del ave *
+                    </label>
+
+                    <select id="nombre-ave" name="nombre-ave" required>
+    <option value="">Seleccione un ave</option>
+    {% for ave in aves %}
+    <option value="{{ ave.id }}" data-tipo="{{ ave.tipo }}" {% if datos.get('nombre-ave') == ave.id|string %}selected{% endif %}>{{ ave.nombre }}</option>
+    {% endfor %}
+</select>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Lugar del avistamiento</legend>
+
+                    {% include '_ubicacion.html' %}
+
+                    <label for="lugar">
+                        Lugar específico *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lugar"
+                        name="lugar"
+                        placeholder="Ej: Cerro Provincia"
+                     maxlength="200" value="{{ datos.get('lugar', '') }}">
+
+                    <p class="ayuda">
+                        Puede indicar un parque, cerro, playa,
+                        reserva o alguna referencia del lugar.
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Fecha y hora</legend>
+
+                    <label for="fecha">
+                        Fecha del avistamiento *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                     value="{{ datos.get('fecha', '') }}">
+
+                    <label for="hora">
+                        Hora del avistamiento *
+                    </label>
+
+                    <input
+                        type="time"
+                        id="hora"
+                        name="hora"
+                     value="{{ datos.get('hora', '') }}">
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Registro multimedia</legend>
+
+                    <label for="archivo">
+                        Fotografías o videos *
+                    </label>
+
+                    <input
+                        type="file"
+                        id="archivo"
+                        name="archivo"
+                        accept="image/jpeg,image/png,image/webp,video/mp4,video/webm"
+                        multiple
+                    >
+
+                    <p class="ayuda">
+                        Debe ingresar al menos una fotografía o video.
+                        Puede seleccionar hasta 10 archivos de máximo 20 MB cada uno. Formatos: JPG, PNG, WebP, MP4 y WebM.
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Información adicional</legend>
+
+                    <label for="descripcion">
+                        Descripción del avistamiento (opcional)
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="5"
+                        maxlength="500"
+                        placeholder="Puede agregar información sobre el comportamiento del ave, cantidad observada, condiciones del lugar, etc."
+                    >{{ datos.get('descripcion', '') }}</textarea>
+
+                    <p class="ayuda">
+                        Máximo 500 caracteres.
+                    </p>
+
+                </fieldset>
+
+                {% include '_errores.html' %}
+{% if errores %}<p class="ayuda">Vuelva a seleccionar las fotografías o videos antes de enviar.</p>{% endif %}
+
+                <button type="submit">
+                    Registrar avistamiento
+                </button>
+
+                <button type="reset" class="boton-secundario">
+                    Limpiar formulario
+                </button>
+
+            </form>
+
+        </section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/formularios.js') }}"></script>
+<script src="{{ url_for('static', filename='js/avistamiento.js') }}"></script>
+{% endblock %}
